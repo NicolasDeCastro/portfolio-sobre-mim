@@ -1,0 +1,177 @@
+/*medidas padrão, um metodo muito interessante e facilitador de escalabilidade é padronizar os valores em variaveis, por exemplo, 
+cada cor tem um codigo, dentro da classe :root voce pode criar uma variavel que as cores de backgroud são da cor azul, então ao inves de ficar 
+adicionando a cor individualmente e dificultando uma futura alteração, vc pode simplesmente adicionar ela em uma variavel e colocar pelo codigo onde desejar
+e quando quiser alterar a cor ,somente altere a que está na root e todos os lugares que recebem essa variavel será alteradas*/
+
+
+/* os inves de adicionar medidas absolutas, que podem atrapalhar a visibilidade dependendo da escolhas do usuario, use a medida REM,  1 REM  equivalem a 16 pixels,logo 
+qualquer valor que estiver em pixel, altere para REM fazendo o calculo valor/REM.*/
+/* outro ponto que pode ser alterado para facilitar a visão do usuario e alterar o tamanho para porcentagem, essa porcentagem está relacionada a 
+o porcentual da tela que será usado, então ela é alterada automaticamente comforme o dispositivo usado*/
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+ 
+ * {
+
+    margin: 0;
+    padding: 0;
+
+}
+
+.Header {
+background-color: #0b0101;
+padding: 2% 0 0 15%;
+
+}
+
+.Header__Navegacao {
+    display: flex;
+
+    gap: 80px;
+
+}
+
+.Header__Navegacao__link {
+    font-family:'Montserrat', sans-serif ;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: #0b0101;
+    color: aqua;
+}
+body{
+    /* height: 100vh; */
+    box-sizing:border-box;
+    background-color:black;
+    color: aliceblue;
+}
+
+.Principal{
+    padding: 5% 15%;
+    display: flex;
+    gap: 82px;
+   /*flex-direction: column;*/
+   align-items: center;
+   justify-content: space-between;
+}
+
+.Titulo{
+
+color:aqua;
+
+}
+.Nicolas{
+/*antigo valor :75vh*/
+width: 50%;
+
+} 
+.Principal__Texto {
+/* antigo valor:615vh*/
+
+width: 50%;
+display: flex;
+flex-direction: column;
+gap: 40px;
+
+
+}
+
+.Principal__Texto__Titulo {
+
+font-size: 2rem;
+font-family:'Krona One', sans-serif;
+
+
+}
+.Principal__Texto__Paragrafo {
+
+font-size: 1.5rem;
+font-family: 'Montserrat', sans-serif;
+
+}
+
+.Principal__Texto__links {
+display: flex;
+flex-direction: column;
+
+align-items: center;
+justify-content: space-between;
+gap: 32px;
+}
+.Principal__Texto__Titulo2 {
+
+font-family:'Krona One', sans-serif; 
+font-weight: 400;
+font-size: 1.5rem;
+
+
+
+}
+.Principal__Texto__links__Bottom1 {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+
+/* background-color: aqua; */
+border: 2px solid aqua;
+width: 50%;
+text-align: center;
+border-radius: 8px;
+font-size: 1.5rem;
+padding: 21.5px 0;
+text-decoration: none;
+color: #ffffff;
+font-family:'Montserrat', sans-serif; 
+font-weight: 600;
+}
+
+.Principal__Texto__links__Bottom1:hover {
+
+background-color: #272727;
+padding: 3%;
+
+
+
+}
+
+.Footer__Paragrafo {
+color: black;
+background-color: aqua;
+padding: 23.5px;
+text-align: center;
+font-family: 'Montserrat', sans-serif; 
+font-size: 1.5rem;
+font-weight: 400;
+}
+
+
+    
+@media(max-width: 1200px){
+
+.Header{
+
+padding: 10%;
+
+}
+.Header__Navegacao{
+
+justify-content: center;
+
+}
+.Principal{
+
+flex-direction:column-reverse;
+padding: 5%;
+
+}
+.Principal__Texto{
+
+width: auto;
+
+
+}
+
+}
